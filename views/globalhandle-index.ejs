@@ -11,12 +11,20 @@
 <body>
 
 <div class="container">
-  <h2><%= title %></h2>
-  <h3>Your Global Handle generation request is submitted successfully.</h3>
-  <p>Please keep an eye on your email box.</p>
-
+  <h2><%= firstname + ' ' + lastname%> </h2>
   <br/>
-  <p>Thank You for using the service!</p>
+
+  <p class="bg-primary">Email me at: <%= email %></p>
+  <a href=<%= linkedin %> class="btn btn-success btn-block" role="button">LinkedIn</a>
+
+  <% if (twitter) { %>
+    <a href=<%= twitter %> class="btn btn-info btn-block" role="button">Twitter</a>
+  <% } %>
+
+  <% if (facebook) { %>
+    <a href=<%= facebook %> class="btn btn-warning btn-block" role="button">Facebook</a>
+  <% } %>
+  
 </div>
 
 </body>
