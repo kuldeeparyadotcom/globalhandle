@@ -19,6 +19,12 @@ Search for string "uri:" and you will find it at two places embedded in ARN.
 Replace 111111111111 with your real account ID.
 arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:111111111111:function:${stageVariables.ServerlessExpressLambdaFunctionName}/invocations
 
+Step 3 - In the directory, where package.json is located, run the below commands - 
+npm install
+node ./bin/www
+
+Enter the following URL in browser - http://localhost:3000
+ 
 ## Resources - ##
 Read below resources first to understand before attempting to provision cloud resources in your account.
 
