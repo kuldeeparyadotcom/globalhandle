@@ -10,21 +10,17 @@ It is tested on node -v v7.8.0 and npm -v 4.2.0.
 ## Steps to run - ##
 Step 1 - Checkout repository
 
-Step 2 - Configure your Account ID. 
-In package.json file replace accountId with your AWS Account ID. [Just one place]
-i.e. "accountId": "1111111111"
-
-Similarly, in simple-proxy-api.yaml file - [Two places]
-Search for string "uri:" and you will find it at two places embedded in ARN.
-Replace 111111111111 with your real account ID.
-arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:111111111111:function:${stageVariables.ServerlessExpressLambdaFunctionName}/invocations
-
-Step 3 - In the directory, where package.json is located, run the below commands - 
+Step 2 - In the directory, where package.json is located, run the below commands - 
 npm install
 node ./bin/www
 
+Step 3 - Verify
 Enter the following URL in browser - http://localhost:3000
- 
+A new S3 bucket should have been created and set up as static website having dynamically generated index file.
+
+Next Steps -
+Transforming this Nodejs app to AWS Serverless app (AWS API Gateway and AWS Lambda).
+
 ## Resources - ##
 Read below resources first to understand before attempting to provision cloud resources in your account.
 
